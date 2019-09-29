@@ -9,6 +9,6 @@
 \pard\pardeftab720\sl300\partightenfactor0
 
 \f0\fs26 \cf2 \cb3 \expnd0\expndtw0\kerning0
-web: gunicorn ALERT.py:ALERT.py
+web: python ALERT.py
 \fs28 \cf4 \cb5 \
 }
