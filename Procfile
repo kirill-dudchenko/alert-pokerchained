@@ -1,1 +1,1 @@
-web: python ALERT.py
+worker: python ALERT.py
