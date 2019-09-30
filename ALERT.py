@@ -50,9 +50,9 @@ def processing(list1, list2):
 
         if list1 != list2:
 
-            small_blind = rows[0]['small_blind'].rstrip("00 EOS")
+            small_blind = rows[0]['small_blind'].rstrip('0 EOS').rstrip('.') if '.' in rows[0]['small_blind'] else rows[0]['small_blind']
             big_blind = str((float(small_blind) * 2))
-            buy_in = players[i]['stack'].rstrip("00 EOS") + " EOS"
+            buy_in = players[i]['stack'].rstrip('0 EOS').rstrip('.') if '.' in players[i]['stack'] else players[i]['stack']
         
             newlist = list(set(list2).difference(set(list1)))
             list1 = []
@@ -66,7 +66,7 @@ def processing(list1, list2):
 
                 for i in range(len(newlist)):
                     if newlist[i] != "":
-                        message = "*" + str(newlist[i]) + "*" + " joined the table!" + "\n\n*Buy-in:* " + buy_in + "\n*Blinds:* "  + small_blind + " / " + big_blind + " EOS" + "\n*Players:* " + list_for_message + "\n*Seats left:* " + str(6 - rows[0]['players_count'])
+                        message = "*" + str(newlist[i]) + "*" + " в игре!" + "\n\n*Бай-ин:* " + buy_in + " EOS" + "\n*Блайнды:* "  + small_blind + " / " + big_blind + " EOS" + "\n*Игроки:* " + list_for_message + "\n*Осталось мест:* " + str(6 - rows[0]['players_count'])
                         send(message, "@pokerchained_alert", my_token)
 
     else: list1 = []
