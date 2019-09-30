@@ -61,7 +61,7 @@ def processing(list1, list2):
             if len(newlist) > 0:
                 list_for_message = ""
                 for i in range(len(list1)):
-                    if list1[i] != ""
+                    if list1[i] != "":
                         list_for_message += list1[i] + ", "
                     list_for_message = list_for_message.rstrip(", ")
 
