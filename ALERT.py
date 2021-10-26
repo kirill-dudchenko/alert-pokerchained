@@ -4,7 +4,7 @@ import telegram
 
 url = "http://136.243.82.203:8888/v1/chain/get_table_rows"
 
-my_token = '912343287:AAGnu8xrRtA4J4Tj1MHDpB6PQ5MFRB1Rk7U'
+my_token = ''
 
 
 def send(msg, chat_id, token):
